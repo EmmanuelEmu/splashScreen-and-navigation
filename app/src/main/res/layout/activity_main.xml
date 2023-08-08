@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="48dp"
+        android:autoText="false"
+        android:fontFamily="serif-monospace"
+        android:text="Contact Form"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/emailId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emailId"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/subject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <EditText
+        android:id="@+id/subject"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Subject"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailId" />
+
+    <EditText
+        android:id="@+id/body"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="body"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subject" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="151dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="261dp"
+        android:text="Send"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/body" />
+</androidx.constraintlayout.widget.ConstraintLayout>
